@@ -349,8 +349,7 @@ const actionBtnStyle = {
 const popupLabelStyle = { fontWeight: 600, color: '#6c3483', padding: '7px 10px 7px 0', textAlign: 'right', width: 120, verticalAlign: 'top', fontSize: 14 };
 const popupValueStyle = { color: '#222', padding: '7px 0 7px 8px', fontSize: 14, minWidth: 120, verticalAlign: 'top' };
 const popupInputStyle = { width: '100%', padding: '7px 8px', borderRadius: 6, border: '1px solid #bbb', fontSize: 14, background: '#fff', marginBottom: 0 };
-const labelStyle = { fontWeight: 500, fontSize: 14 };
-const inputStyle = { width: "100%", padding: 7, borderRadius: 5, border: "1px solid #ccc", marginTop: 2, marginBottom: 8, fontSize: 14 };
+// ...existing code...
 
 // Optional: media queries using inline JS for mobile adjustments
 // Wrap this in a useEffect if you want dynamic font resizing or column adjustments

@@ -37,3 +37,5 @@ coverage/
 # Temporary files
 *.tmp
 *.log
+
+# Add any additional ignores below if needed

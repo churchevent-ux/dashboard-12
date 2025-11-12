@@ -38,8 +38,9 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Redirect root to /admin */}
+        <Route path="/" element={<Navigate to="/admin" replace />} />
         {/* -------------------- Public Routes -------------------- */}
-        <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin-login" element={<AdminLogin />} />
