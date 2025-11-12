@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 // Dummy data with multiple dates
 const breakData = {
@@ -66,11 +66,13 @@ const BreakPage = () => {
   }, []);
 
   // Filter data for selected date
-  let breaksForDate = breakData[selectedDate] || [];
-  breaksForDate = breaksForDate.filter(
-    s => s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-         s.id.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const breaksForDate = useMemo(() => {
+    let filtered = breakData[selectedDate] || [];
+    return filtered.filter(
+      s => s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+           s.id.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [breakData, selectedDate, searchQuery]);
 
   // Sort: ongoing breaks on top
   breaksForDate.sort((a, b) => (!a.breakOut && b.breakOut ? -1 : a.breakOut && !b.breakOut ? 1 : 0));

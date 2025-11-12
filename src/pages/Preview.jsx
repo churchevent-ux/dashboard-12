@@ -98,7 +98,7 @@ const Preview = () => {
     };
 
     initializeParticipants();
-  }, [state]);
+  }, [state, mapParticipantData]);
 
   /** Handlers **/
   const handleChange = (index, field, value) => {
